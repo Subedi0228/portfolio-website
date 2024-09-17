@@ -1,0 +1,29 @@
+/* Hero CSS */
+.hero{
+    display: flex;
+    padding: 5vh 15vw 0 15vw;
+    gap: 4vw;
+}
+
+.container2{
+    max-width: 500px;
+}
+
+img{
+    max-width: 500px;
+}
+
+.intro {
+    color: #D35400;
+    font-size: 32px;
+}
+
+.title{
+    color: #2980B9;
+    font-size: 32px;
+}
+
+.bodyText{
+    color: #7F8C8D;
+    font-size: 20px;
+}

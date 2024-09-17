@@ -1,9 +1,10 @@
 import React from "react";
-import Navbar from "./components/navbar";
-import Hero from "./components/hero";
-import Experience from "./components/experience";
-import Projects from "./components/projects";
-import Footer from "./components/footer";
+import "./App.css";
+import Navbar from "./components/navbar/navbar";
+import Hero from "./components/hero/hero";
+import Experience from "./components/experience/experience";
+import Projects from "./components/projects/projects";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
