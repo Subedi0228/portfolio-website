@@ -30,12 +30,12 @@ nav a {
     font-weight: 800; /* 600 weight */
 }
 
-.container1 li a {
+.left-container li a {
     font-size: 2rem;
     line-height: 2.25rem;
 }
 
-.container2 li a {
+.right-container li a {
     padding-left: 2vw;
     font-size: 1.875rem;
     line-height: 2.25rem;

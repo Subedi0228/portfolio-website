@@ -1,20 +1,20 @@
 import React from 'react';
 import './navbar.css';
+import Logo from '../../images/logo.png';
 
 function Navbar() {
   return (
     <nav>
       <ul>
         <div className="container">
-          <div className="container1">
-            <li><a href="#logo">logo</a></li>
+          <div className="left-container">
+            <li><a href="#home"><img src={Logo} alt="Logo" className="navbar-logo" /></a></li>
           </div>
-          <div className="container2">
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <div className="right-container">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </div>
         </div>
-      </div>
       </ul>
     </nav>
   );

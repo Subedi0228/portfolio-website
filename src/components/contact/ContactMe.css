@@ -1,0 +1,103 @@
+/* Contact container setup with Flexbox for layout */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Total height for the contact section */
+    margin-bottom: 10vw;
+  }
+  
+  /* Styling for the Contact Me text section */
+  .contact-text {
+    max-height: 15vh;
+    width: 50vw; 
+    text-align: center;
+    background-color: #6E07F3;
+    padding: 5vw 0;
+    color: white; 
+  }
+  
+  /* Heading inside the Contact Me text */
+  .contact-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem; 
+  }
+  
+  /* Paragraph inside the Contact Me text */
+  .contact-text p {
+    font-size: 1.2rem;
+  }
+  
+  /* Styling for the form */
+  .contact-form {
+    width: 40vw;
+    padding: 1.5vw 2vw 2vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; 
+    background-color: #D0D5D9; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25), -2px -2px 10px 2px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Input group to wrap labels and input/textarea fields */
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+  }
+  
+  /* Label styling for each input/textarea */
+  .input-group label {
+    font-size: 1rem;
+    color: white; 
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  /* Input and textarea fields styling */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 1vw; 
+    border: none;
+    border-radius: 5px; 
+    
+    /* Inner shadow for depth */
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    font-size: 1rem;
+  }
+  
+  /* Specific height for textarea */
+  .contact-form textarea {
+    height: 150px;
+    resize: none; 
+  }
+  
+  /* Button styling for the form submission */
+  .contact-form button {
+    padding: 1rem;
+    background-color: #6E07F3; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Button hover effect */
+  .contact-form button:hover {
+    background-color: #5C06D1; 
+  }
+  
+  /* Extra section to align with the contact text area */
+  .extra {
+    width: 5vw;
+    height: 15vh; 
+    padding: 5vw 0;
+    flex: 1;
+    background-color: #6E07F3;
+  }
+  

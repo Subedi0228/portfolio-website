@@ -1,17 +1,12 @@
 .projects-container {
-  width: 100%;
+  max-width: 70vw;
   display: flex;
   justify-content: center;
-  gap: 20vw; 
-  margin: 0 0 10vw 0;
+  flex-wrap: wrap;
+  margin: -7.5vw auto 15vw auto; /* Center the container with auto margins */
+  gap: 4vw;
 }
 
-  
-  
-.project {
-  margin-bottom: 40px;
-
-}
 
 .projects-text-cont{
   display: flex;
@@ -22,12 +17,12 @@
 }
 
 .titleText{
-  font-size: 30px;
+  font-size: 2em;
   font-weight: 600;
   font-family: "eurostile", sans-serif;
   color: white;
   text-align: center;
-  max-width: 500px;
+  max-width: 75vw;
   -webkit-font-smoothing: antialiased;
 }
 

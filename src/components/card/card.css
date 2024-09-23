@@ -1,7 +1,6 @@
 .slider-card {
     width: 100%;
-    max-width: 350px;
-    margin: -20vh 0 0 0;
+    max-width: 18vw;
     text-align: center;
     padding: 10px;
     background-color: #CACFD2;
@@ -19,7 +18,7 @@
   
   .slider-track {
     display: flex;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     /* Controls the smoothness of the sliding effect */
   }
   

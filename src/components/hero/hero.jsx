@@ -1,18 +1,30 @@
-import React from 'react';
-import heroImage from '../../images/hero.png';
+import React, { useState } from 'react';
+import heroImage from '../../images/hero.webp';
 import './hero.css';
 
-
 function Hero() {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   return (
     <section id="home">
-      <div className="hero">
-        <img src={heroImage} alt="hero" className='container1' />
-        <div className="container2">
-          <h1 className='intro'>Hey, I'm Chiran Subedi</h1>
-          <h1 className='title'>Software & Web Developer</h1>
-          <p className='bodyText'>I specialize in crafting seamless digital experiences, blending technical expertise with thoughtful design. From building robust back-end systems to creating intuitive user interfaces, my work is driven by a passion for innovation and problem-solving. Let's create something remarkable together.</p>
-        </div>
+      <div className="hero" style={{ visibility: isImageLoaded ? 'visible' : 'hidden' }}> 
+        {/* Image */}
+        <img 
+          src={heroImage} 
+          alt="hero" 
+          className='container1' 
+          onLoad={() => setIsImageLoaded(true)} 
+        />
+
+        {/* Hero Content */}
+        {isImageLoaded && (
+          <div className="container2">
+            <h1 className='header-text'>Hey, I'm Chiran Subedi</h1>
+            <h1 className='title-text'>Software & Web Developer</h1>
+            <p className='body-text'>
+            As a Software Engineering student at Iowa State University, I've developed digital platforms for various companies and collaborated on numerous projects with my peers, honing my skills through real-world experience and teamwork.</p>
+          </div>
+        )}
       </div>
     </section>
   );

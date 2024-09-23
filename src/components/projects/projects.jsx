@@ -8,6 +8,10 @@ import grocery1 from '../../images/grocery1.png';
 import grocery2 from '../../images/grocery2.png';
 import grocery3 from '../../images/grocery3.png';
 import grocery4 from '../../images/grocery4.png';
+import precision1 from '../../images/precision1.png';
+import precision2 from '../../images/precision2.png';
+import precision3 from '../../images/precision3.png';
+import precision4 from '../../images/precision4.png';
 
 const Projects = () => {
   const project1 = {
@@ -24,11 +28,25 @@ const Projects = () => {
     callToAction: 'Learn More >',
   };
 
+  const project3 = {
+    images: [precision1, precision2, precision3, precision4],
+    title: 'Precision Contractors of Iowa',
+    description: 'Currently working on an online platform for a company that specializes in roofing, siding, gutters, windows, decks, and remodels.',
+    callToAction: 'Learn More >',
+  };
+
+  const project4 = {
+    images: [grocery1, grocery2, grocery3, grocery4],
+    title: 'Online Grocery App',
+    description: 'Currently working on an online platform for a company that specializes in roofing, siding, gutters, windows, decks, and remodels.',
+    callToAction: 'Learn More >',
+  };
+
   return (
     <div>
     <div className='projects-text-cont'>
       <h1 className='titleText'>My Projects</h1>
-      <p className='bodyText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptate eligendi exercitationem esse velit deserunt incidunt sed quia! Voluptatibus debitis consectetur totam quos ipsam vitae autem non sequi nam obcaecati!</p>
+      <p className='bodyText'>Here are a few of the projects where I combined my Iowa State education with personal coding experience to build practical solutions.</p>
     </div>
       <div className="projects-container">
         <div className="project">
@@ -36,6 +54,12 @@ const Projects = () => {
         </div>
         <div className="project">
           <SliderCard images={project2.images} title={project2.title} description={project2.description} callToAction={project2.callToAction} />
+        </div>
+        <div className="project">
+          <SliderCard images={project3.images} title={project3.title} description={project3.description} callToAction={project3.callToAction} />
+        </div>
+        <div className="project">
+          <SliderCard images={project4.images} title={project4.title} description={project4.description} callToAction={project4.callToAction} />
         </div>
       </div>
     </div>
