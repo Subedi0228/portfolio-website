@@ -1,17 +1,17 @@
 import React from 'react';
 import SliderCard from './../card/card.jsx';
 import './projects.css';
-import findRight1 from '../../images/findRight1.png';
-import findRight2 from '../../images/findRight2.png';
-import findRight3 from '../../images/findRight3.png';
-import grocery1 from '../../images/grocery1.png';
-import grocery2 from '../../images/grocery2.png';
-import grocery3 from '../../images/grocery3.png';
-import grocery4 from '../../images/grocery4.png';
-import precision1 from '../../images/precision1.png';
-import precision2 from '../../images/precision2.png';
-import precision3 from '../../images/precision3.png';
-import precision4 from '../../images/precision4.png';
+import findRight1 from '../../images/findRight1.webp';
+import findRight2 from '../../images/findRight2.webp';
+import findRight3 from '../../images/findRight3.webp';
+import grocery1 from '../../images/grocery1.webp';
+import grocery2 from '../../images/grocery2.webp';
+import grocery3 from '../../images/grocery3.webp';
+import grocery4 from '../../images/grocery4.webp';
+import precision1 from '../../images/precision1.webp';
+import precision2 from '../../images/precision2.webp';
+import precision3 from '../../images/precision3.webp';
+import precision4 from '../../images/precision4.webp';
 
 const Projects = () => {
   const project1 = {
