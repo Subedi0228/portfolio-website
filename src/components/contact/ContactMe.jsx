@@ -18,11 +18,14 @@ const ContactMe = () => {
         <h1 id='header'>Contact Me</h1>
         <p id='subtext'>Feel free to drop a message — I’m always open to new opportunities.</p>
       </div>
-      <form className="contact_form" action="POST" data-netlify='true'>
+      <form className="contact_form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+        {/* This hidden input is required by Netlify for form submissions */}
+        <input type="hidden" name="form-name" value="contact" />
+
         <div className="contact_me_identifiers">
           <input
             type="text"
-            name='Name'
+            name='name'
             id="name"
             placeholder={namePlaceholder}
             onFocus={() => setNamePlaceholder('')}
@@ -31,7 +34,7 @@ const ContactMe = () => {
           />
           <input
             type="email"
-            name='Email'
+            name='email'
             id="email"
             placeholder={emailPlaceholder}
             onFocus={() => setEmailPlaceholder('')}
@@ -41,13 +44,16 @@ const ContactMe = () => {
         </div>
         <textarea
           id="message"
-          name='Message'
+          name='message'
           placeholder={messagePlaceholder}
           onFocus={() => setMessagePlaceholder('')}
           onBlur={(e) => handleInputChange(e, setMessagePlaceholder, 'Message')}
           onInput={(e) => handleInputChange(e, setMessagePlaceholder, 'Message')}
         ></textarea>
+        
+        {/* Netlify reCAPTCHA */}
         <div data-netlify-recaptcha="true"></div>
+
         <button type="submit" id='submit_button'>SEND</button>
       </form>
     </div>
