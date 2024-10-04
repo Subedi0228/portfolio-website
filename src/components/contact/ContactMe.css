@@ -34,7 +34,7 @@
 }
 
 /* The entire input container include message and submit button */
-.contact_form{
+.contact-form{
   display: flex;
   flex-direction: column;
   gap: 20px;
