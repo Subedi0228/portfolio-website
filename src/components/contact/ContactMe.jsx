@@ -1,30 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ContactMe.css';
 
 const ContactMe = () => {
+  const [namePlaceholder, setNamePlaceholder] = useState('Name');
+  const [emailPlaceholder, setEmailPlaceholder] = useState('Email');
+  const [messagePlaceholder, setMessagePlaceholder] = useState('Message');
+
+  const handleInputChange = (e, setPlaceholder, defaultText) => {
+    if (e.target.value === '') {
+      setPlaceholder(defaultText);
+    }
+  };
+
   return (
-    <div className="contact-container">
-      <div className="contact-text">
-        <h1>Contact Me</h1>
-        <p>Feel free to drop a message — I’m always open to new opportunities.</p>
+    <div className="contact_me_container">
+      <div className="contact_me_text">
+        <h1 id='header'>Contact Me</h1>
+        <p id='subtext'>Feel free to drop a message — I’m always open to new opportunities.</p>
       </div>
-      <form className="contact-form">
-        <div className="input-group">
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" />
+      <form className="contact_form" action="POST" data-netlify='true'>
+        <div className="contact_me_identifiers">
+          <input
+            type="text"
+            name='Name'
+            id="name"
+            placeholder={namePlaceholder}
+            onFocus={() => setNamePlaceholder('')}
+            onBlur={(e) => handleInputChange(e, setNamePlaceholder, 'Name')}
+            onInput={(e) => handleInputChange(e, setNamePlaceholder, 'Name')}
+          />
+          <input
+            type="email"
+            name='Email'
+            id="email"
+            placeholder={emailPlaceholder}
+            onFocus={() => setEmailPlaceholder('')}
+            onBlur={(e) => handleInputChange(e, setEmailPlaceholder, 'Email')}
+            onInput={(e) => handleInputChange(e, setEmailPlaceholder, 'Email')}
+          />
         </div>
-        <div className="input-group">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" />
-        </div>
-        <div className="input-group">
-          <label htmlFor="message">Message</label>
-          <textarea id="message"></textarea>
-        </div>
-        <button type="submit">Send Message</button>
+        <textarea
+          id="message"
+          name='Message'
+          placeholder={messagePlaceholder}
+          onFocus={() => setMessagePlaceholder('')}
+          onBlur={(e) => handleInputChange(e, setMessagePlaceholder, 'Message')}
+          onInput={(e) => handleInputChange(e, setMessagePlaceholder, 'Message')}
+        ></textarea>
+        <div data-netlify-recaptcha="true"></div>
+        <button type="submit" id='submit_button'>SEND</button>
       </form>
-      <div className="extra">
-      </div>
     </div>
   );
 };
