@@ -19,7 +19,7 @@ const ContactMe = () => {
         <p id='subtext'>Feel free to drop a message — I’m always open to new opportunities.</p>
       </div>
 
-      <form className="contact-form" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="#home">
+      <form className="contact-form" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
         <div className="contact_me_identifiers">
           <input
             type="text"
