@@ -18,7 +18,7 @@ const ContactMe = () => {
         <h1 id='header'>Contact Me</h1>
         <p id='subtext'>Feel free to drop a message — I’m always open to new opportunities.</p>
       </div>
-      <form className="contact_form" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form className="contact_form" name="contact" netlify method="post" data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact" />
         <div className="contact_me_identifiers">
           <input
