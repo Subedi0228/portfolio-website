@@ -113,3 +113,16 @@ input::placeholder, textarea::placeholder {
     margin: 0 auto; /* Center the input fields */
   }
 }
+
+/* Autofill issues */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #6E07F3 inset;
+  caret-color: white;
+  -webkit-text-fill-color: #fff;
+}
+
