@@ -114,7 +114,7 @@ input::placeholder, textarea::placeholder {
   }
 }
 
-/* Autofill issues */
+/* Autofill style */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

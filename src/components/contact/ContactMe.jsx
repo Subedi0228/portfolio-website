@@ -19,7 +19,7 @@ const ContactMe = () => {
         <p id='subtext'>Feel free to drop a message — I’m always open to new opportunities.</p>
       </div>
 
-      <form className="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form className="contact-form" action="https://formsubmit.co/chiransubedi2001@gmail.com" method="POST">
         <div className="contact_me_identifiers">
           <input
             type="text"
@@ -42,7 +42,7 @@ const ContactMe = () => {
         </div>
         <textarea
           id="message"
-          name='Message'
+          name='message'
           placeholder={messagePlaceholder}
           onFocus={() => setMessagePlaceholder('')}
           onBlur={(e) => handleInputChange(e, setMessagePlaceholder, 'Message')}
