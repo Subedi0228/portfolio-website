@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com"; // Import EmailJS
 import "./ContactMe.css";
 
 const ContactMe = () => {
@@ -6,7 +7,7 @@ const ContactMe = () => {
   const [emailPlaceholder, setEmailPlaceholder] = useState("Email");
   const [messagePlaceholder, setMessagePlaceholder] = useState("Message");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSending, setIsSending] = useState(false);
+  const [isSending, setIsSending] = useState(false); // New state for sending
 
   const handleInputChange = (e, setPlaceholder, defaultText) => {
     if (e.target.value === "") {
@@ -17,21 +18,27 @@ const ContactMe = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSending(true); // Set sending state to true when form is submitted
-    const form = e.target;
 
-    // Use the Formspark endpoint to submit the form data
-    fetch("https://submit-form.com/ZzhKSNFuc", {
-      method: "POST",
-      body: new FormData(form),
-    })
-      .then(() => {
-        setIsSubmitted(true);
-        setIsSending(false); // Reset sending state
-      })
-      .catch(() => {
-        alert("Form submission failed. Please try again.");
-        setIsSending(false); // Reset sending state if submission fails
-      });
+    // EmailJS sendForm function
+    emailjs
+      .sendForm(
+        "service_ysjloyg", // Replace with your EmailJS service ID
+        "template_5cqgwii", // Replace with your EmailJS template ID
+        e.target,
+        "ZpEyrDNb8PEKt0-98" // Replace with your EmailJS user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSubmitted(true);
+          setIsSending(false); // Reset sending state
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Form submission failed. Please try again.");
+          setIsSending(false); // Reset sending state if submission fails
+        }
+      );
   };
 
   return (
@@ -45,12 +52,6 @@ const ContactMe = () => {
 
       {!isSubmitted ? (
         <form className="contact-form" onSubmit={handleSubmit}>
-          {/* Honeypot field for spam protection */}
-          <input type="text" name="_honey" style={{ display: "none" }} />
-
-          {/* Disable captcha */}
-          <input type="hidden" name="_captcha" value="false" />
-
           <div className="contact_me_identifiers">
             <input
               type="text"
@@ -92,12 +93,13 @@ const ContactMe = () => {
             required
           ></textarea>
           <button type="submit" id="submit_button" disabled={isSending}>
-            {isSending ? "Sending..." : "SEND"}
+            {isSending ? "Sending..." : "SEND"}{" "}
+            {/* Change text during sending */}
           </button>
         </form>
       ) : (
         <div className="success-message">
-          <h2>✔ Thank you!</h2>
+          <h2>✔ Thank you!</h2> {/* Add checkmark */}
           <p>
             Your message has been sent successfully. I'll get back to you
             shortly.
