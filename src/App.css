@@ -1,10 +1,10 @@
 /* App.css */
 body {
-    background-color: #ECF0F1; /* Light Gray background */
-    margin: 0;
-    font-family: Arial, sans-serif; /* Set a default font for the app */
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
+  background-color: #ecf0f1; /* Light Gray background */
+  margin: 0;
+  font-family: Arial, sans-serif; /* Set a default font for the app */
+}
+
+html {
+  scroll-behavior: smooth;
+}

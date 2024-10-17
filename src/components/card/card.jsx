@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './card.css'; // Import the updated CSS
+import React, { useState } from "react";
+import "./card.css"; // Import the updated CSS
 
 const SliderCard = ({ images, title, description, callToAction }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,7 +41,7 @@ const SliderCard = ({ images, title, description, callToAction }) => {
       </div>
       <h2 className="slider-title">{title}</h2>
       <p className="slider-description">{description}</p>
-      <button className='slider-action'>{callToAction}</button>
+      <button className="slider-action">{callToAction}</button>
     </div>
   );
 };

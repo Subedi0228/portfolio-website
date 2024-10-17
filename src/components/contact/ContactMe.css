@@ -1,11 +1,11 @@
-*{
+* {
   font-family: "europa", sans-serif;
 }
 
 /* The overall container for the two sides of this element */
-.contact_me_container{
+.contact_me_container {
   display: flex;
-  background-color: #6E07F3;
+  background-color: #6e07f3;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -14,27 +14,27 @@
 }
 
 /* The text only portion of the component */
-.contact_me_text{
+.contact_me_text {
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 25vw;
 }
 
-#header{
+#header {
   font-size: 2em;
   color: white;
   margin-bottom: 10px;
 }
 
-#subtext{
+#subtext {
   font-size: 20px;
   color: white;
   line-height: 25px;
 }
 
 /* The entire input container include message and submit button */
-.contact-form{
+.contact-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -42,13 +42,14 @@
 }
 
 /* The identifiers of the form: name and email */
-.contact_me_identifiers{
+.contact_me_identifiers {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-#name, #email{
+#name,
+#email {
   border: none;
   border-bottom: 2px solid white;
   background-color: transparent;
@@ -59,7 +60,7 @@
 }
 
 /* Message and submit button */
-#message{
+#message {
   border: none;
   border-bottom: 2px solid white;
   background-color: transparent;
@@ -71,13 +72,13 @@
   padding: 5px;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   font-size: 18px; /* Match the font size of the placeholder text */
   color: #d3d3d3;
 }
 
-
-#submit_button{
+#submit_button {
   border: 2px solid white;
   border-radius: 10px;
   background-color: transparent;
@@ -85,6 +86,23 @@ input::placeholder, textarea::placeholder {
   font-size: 20px;
   font-weight: bold;
   padding: 10px;
+  cursor: pointer; /* Add pointer cursor */
+}
+
+#submit_button:disabled {
+  cursor: not-allowed; /* Disable cursor when sending */
+  opacity: 0.6; /* Greyed-out effect */
+}
+
+.success-message h2 {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.success-message p {
+  color: white;
+  font-size: 18px;
 }
 
 /* Responsive Design for smaller screens */
@@ -108,7 +126,10 @@ input::placeholder, textarea::placeholder {
     gap: 10px;
   }
 
-  #name, #email, #message, #submit_button {
+  #name,
+  #email,
+  #message,
+  #submit_button {
     width: 90%; /* Make input fields take up more space */
     margin: 0 auto; /* Center the input fields */
   }
@@ -121,8 +142,7 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #6E07F3 inset;
+  -webkit-box-shadow: 0 0 0px 1000px #6e07f3 inset;
   caret-color: white;
   -webkit-text-fill-color: #fff;
 }
-
