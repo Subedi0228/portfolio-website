@@ -1,24 +1,27 @@
-/* footer.css */
+/* Import the required fonts */
+@import "~@fortawesome/fontawesome-free/css/all.css";
 
+/* footer.css */
 footer {
-  background-color: #333;
+  background-color: #0a142f;
   color: #fff;
-  padding: 20px 0 0 0;
   text-align: center;
 }
 
 .footer-content {
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .footer-links {
+  padding: 10vh 0 2vh 0;
   margin-bottom: 10px;
 }
 
 .footer-links a {
   color: #fff;
-  margin: 0 10px;
+  padding: 20px;
   text-decoration: none;
 }
 
@@ -27,7 +30,7 @@ footer {
 }
 
 .social-media {
-  margin-bottom: 10px;
+  padding: 10px 10px 20px 10px;
 }
 
 .social-media a {
@@ -37,18 +40,24 @@ footer {
   text-decoration: none;
 }
 
-.social-media a:hover {
-  color: #007bff;
+/* Social Media Hover colors */
+
+.social-media a:nth-child(1):hover {
+  color: #0077b5; /* LinkedIn Blue */
 }
 
-p {
-  margin: 5px 0;
+.social-media a:nth-child(2):hover {
+  color: #333333; /* GitHub Gray */
 }
 
-p a {
-  color: #007bff;
+.social-media a:nth-child(3):hover {
+  color: #1da1f2; /* Twitter Blue */
 }
 
-p a:hover {
-  text-decoration: underline;
+.social-media a:nth-child(4):hover {
+  color: #e4405f; /* Instagram Pink/Red */
+}
+
+.copyright {
+  margin-bottom: 0;
 }

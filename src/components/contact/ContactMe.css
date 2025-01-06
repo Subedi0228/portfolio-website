@@ -5,11 +5,12 @@
 /* The overall container for the two sides of this element */
 .contact_me_container {
   display: flex;
-  background-color: #6e07f3;
+  background-color: #0f52ba;
   justify-content: center;
   align-items: center;
   gap: 30px;
   height: 30vh;
+  padding: 20px;
   margin-bottom: 20vh;
 }
 

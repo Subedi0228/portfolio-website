@@ -2,6 +2,7 @@
 .hero {
   display: flex;
   padding: 0 15vw 5vw 15vw;
+  justify-content: center;
 }
 
 .container2 {
@@ -31,4 +32,25 @@ img {
   color: #7f8c8d;
   font-size: 22px;
   font-family: "europa", sans-serif;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse; /* Stack content vertically */
+    margin-top: 20vh;
+  }
+
+  .header-text,
+  .title-text {
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-size: 32px;
+  }
+
+  .body-text {
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+  }
 }

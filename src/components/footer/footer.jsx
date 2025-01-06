@@ -11,13 +11,15 @@ function Footer() {
           <a href="#contact">Contact Me</a>
         </div>
         <div className="social-media">
+          {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/yourprofile"
+            href="www.linkedin.com/in/chiran-subedi-50b72a162"
             target="_blank"
             rel="noopener noreferrer"
           >
             <i className="fab fa-linkedin"></i>
           </a>
+          {/* GitHub */}
           <a
             href="https://github.com/yourusername"
             target="_blank"
@@ -25,6 +27,7 @@ function Footer() {
           >
             <i className="fab fa-github"></i>
           </a>
+          {/* X */}
           <a
             href="https://twitter.com/yourusername"
             target="_blank"
@@ -32,13 +35,17 @@ function Footer() {
           >
             <i className="fab fa-twitter"></i>
           </a>
-        </div>
-        <p>&copy; {new Date().getFullYear()} Chiran Subedi</p>
-        <p>
-          Contact:{" "}
-          <a href="mailto:chiransubedi2001@gmail.com">
-            chiransubedi2001@gmail.com
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-instagram"></i>
           </a>
+        </div>
+        <p className="copyright">
+          &copy; Copyright {new Date().getFullYear()} - Chiran Subedi
         </p>
       </div>
     </footer>
