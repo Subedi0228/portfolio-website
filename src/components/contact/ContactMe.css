@@ -9,8 +9,9 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  height: 30vh;
-  padding: 20px;
+  height: auto;
+  min-height: 30vh;
+  padding: 40px 20px;
   margin-bottom: 20vh;
 }
 
@@ -19,7 +20,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 25vw;
+  width: 35vw;
+  max-width: 500px;
 }
 
 #header {
@@ -58,6 +60,8 @@
   outline: none;
   font-size: 18px;
   padding: 5px;
+  width: 100%;
+  min-width: 200px;
 }
 
 /* Message and submit button */
@@ -71,6 +75,7 @@
   resize: none;
   height: 100px;
   padding: 5px;
+  width: 100%;
 }
 
 input::placeholder,
@@ -111,15 +116,14 @@ textarea::placeholder {
   .contact_me_container {
     flex-direction: column;
     height: auto;
+    
   }
 
   .contact_me_text {
-    width: 100%; /* Take up the full width */
-    margin-bottom: 20px; /* Add some space between the text and the form */
+    width: 90vw;
   }
-
-  .contact_form {
-    width: 100%; /* Take up the full width */
+  .contact-form {
+    width: 75vw;
   }
 
   .contact_me_identifiers {
@@ -132,7 +136,7 @@ textarea::placeholder {
   #message,
   #submit_button {
     width: 90%; /* Make input fields take up more space */
-    margin: 0 auto; /* Center the input fields */
+    margin: 0 auto 20px auto; /* Center the input fields */
   }
 }
 
